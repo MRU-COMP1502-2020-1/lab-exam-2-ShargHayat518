@@ -8,7 +8,8 @@ package lsystems;
  * @author tjkendon
  *
  */
-public abstract class LRule {
+public abstract class LRule 
+{
 
 	
 	/**
