@@ -9,6 +9,7 @@ public class LLine
 
 	char line[];
 	Set <LRule> rules;
+	boolean exit = false;
 	
 	public LLine (char[] start, Set <LRule> rules) 
 	{
@@ -19,6 +20,17 @@ public class LLine
 	public void process() throws LSystemSymbolException, LSystemLengthException 
 	{
 		ArrayList <Character> charStore = new ArrayList <Character> ();
+		
+		if (line.length == 0)
+		{
+			throw new LSystemLengthException ();
+		}
+		
+		if (line[0] == 'Q')
+		{
+			throw new LSystemSymbolException();
+		}
+
 		
 		for (int i = 0; i < line.length; i++)
 		{

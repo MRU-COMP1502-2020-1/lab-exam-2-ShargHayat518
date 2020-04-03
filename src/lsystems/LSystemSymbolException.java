@@ -5,6 +5,6 @@ public class LSystemSymbolException extends Exception
 	
 	public String getSymbol()
 	{
-		return "PLACEHOLDER";
+		return "Wrong Symbol Type! Please check your rules!";
 	}
 }
