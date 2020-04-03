@@ -43,6 +43,7 @@ public class LLine
 	 * @param list
 	 * @return
 	 */
+	
 	private char[] listToArray(List <Character> list) 
 	{
 		char[] newChars = new char[list.size()];
