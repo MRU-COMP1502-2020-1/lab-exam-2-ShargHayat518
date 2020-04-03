@@ -26,11 +26,13 @@ public class LLine
 			throw new LSystemLengthException ();
 		}
 		
-		if (line[0] == 'Q')
+		for (int i = 0; i < line.length; i++)
 		{
-			throw new LSystemSymbolException();
+			if (line[i] == 'Q')
+			{
+				throw new LSystemSymbolException();
+			}
 		}
-
 		
 		for (int i = 0; i < line.length; i++)
 		{
