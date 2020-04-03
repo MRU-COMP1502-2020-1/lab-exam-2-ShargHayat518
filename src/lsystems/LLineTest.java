@@ -10,14 +10,16 @@ import org.junit.Test;
 public class LLineTest {
 
 	@Test
-	public void testConstruction() {
+	public void testConstruction() 
+	{
 		char[] test = {'T', 'E', 'S', 'T'};
 		Set<LRule> rules = new HashSet<LRule>();
 		LLine line = new LLine(test, rules);
 	}
 	
 	@Test
-	public void testToString() {
+	public void testToString() 
+	{
 		char[] test = {'T', 'E', 'S', 'T'};
 		Set<LRule> rules = new HashSet<LRule>();
 		LLine line = new LLine(test, rules);
@@ -25,7 +27,8 @@ public class LLineTest {
 	}
 	
 	@Test
-	public void testA_Aprocess() throws LSystemSymbolException, LSystemLengthException {
+	public void testA_Aprocess() throws LSystemSymbolException, LSystemLengthException 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		rules.add(new A_A());
@@ -36,7 +39,8 @@ public class LLineTest {
 	}
 	
 	@Test
-	public void testA_AAprocess() throws LSystemSymbolException, LSystemLengthException {
+	public void testA_AAprocess() throws LSystemSymbolException, LSystemLengthException 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		rules.add(new A_AA());
@@ -56,7 +60,8 @@ public class LLineTest {
 		rules.add(new C_B());
 
 		LLine line = new LLine(test, rules);
-		for (int i = 1; i <= 10; i++) {
+		for (int i = 1; i <= 10; i++) 
+		{
 			line.process();
 		}
 		assertEquals("Expected output ABBCBCABCAABBCAABABBC after 10 runs", 
@@ -66,7 +71,8 @@ public class LLineTest {
 	}
 	
 	@Test
-	public void testLSystemLengthException() {
+	public void testLSystemLengthException() 
+	{
 		char[] test = {'A'};
 		Set<LRule> rules = new HashSet<LRule>();
 		rules.add(new A_X());
